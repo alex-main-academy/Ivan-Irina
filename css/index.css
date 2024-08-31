@@ -1,3 +1,10 @@
+/*
+* Prefixed by:
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 *,
 *::after,
 *::before {
@@ -6,6 +13,7 @@
   border: 0;
   font-family: inherit;
   vertical-align: baseline;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -46,9 +54,23 @@ input {
   border: none;
   background-color: transparent;
 }
+
 input::-moz-placeholder {
   color: inherit;
 }
+
+input::-webkit-input-placeholder {
+  color: inherit;
+}
+
+input:-ms-input-placeholder {
+  color: inherit;
+}
+
+input::-ms-input-placeholder {
+  color: inherit;
+}
+
 input::placeholder {
   color: inherit;
 }
@@ -66,6 +88,7 @@ a {
   font-display: swap;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Palatino";
   src: url("../fonts/palatinolinotype_roman.ttf");
@@ -73,6 +96,7 @@ a {
   font-display: swap;
   font-style: normal;
 }
+
 html {
   font-size: 10px;
   width: 48rem;
@@ -97,9 +121,15 @@ body {
 
 .decor {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   justify-content: center;
   gap: 0.3rem;
@@ -118,7 +148,11 @@ body {
 }
 
 .heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -162,9 +196,11 @@ body {
   margin-left: 3rem;
   text-shadow: 0.1rem 0.1rem 3rem rgba(255, 255, 255, 0.58);
 }
+
 .hero__title span {
   margin-left: 12rem;
 }
+
 .hero__title b {
   font-weight: 400;
   position: absolute;
@@ -200,6 +236,7 @@ body {
   position: relative;
   z-index: 1;
 }
+
 .photo img {
   max-width: 48rem;
   width: 100%;
@@ -251,7 +288,7 @@ body {
   margin-top: 2.3rem;
 }
 
-.place__item + .place__item {
+.place__item+.place__item {
   margin-top: 1rem;
   margin-bottom: 5rem;
 }
@@ -259,8 +296,14 @@ body {
 .place__link {
   height: 7rem;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background-color: rgba(142, 104, 8, 0.4);
   border-radius: 2rem;
@@ -271,6 +314,7 @@ body {
   color: #FFFFFF;
   margin-bottom: 5.6rem;
 }
+
 .place__link span {
   margin-bottom: 0.6rem;
 }
@@ -291,7 +335,11 @@ body {
 }
 
 .dress__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
   align-items: stretch;
   gap: 1.7rem;
 }
@@ -302,18 +350,23 @@ body {
   border-radius: 50%;
   border: 0.2rem solid rgba(142, 104, 8, 0.4);
 }
+
 .dress__item:nth-child(1) {
   background-color: #3E1416;
 }
+
 .dress__item:nth-child(2) {
   background-color: #5F3A27;
 }
+
 .dress__item:nth-child(3) {
   background-color: #A65528;
 }
+
 .dress__item:nth-child(4) {
   background-color: #B08D77;
 }
+
 .dress__item:nth-child(5) {
   background-color: #F7F4E9;
 }
@@ -329,7 +382,11 @@ body {
 
 .programm__list {
   padding: 1.5rem 3rem 4rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   overflow: auto;
   gap: 4rem;
@@ -338,7 +395,11 @@ body {
 }
 
 .programm__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 2rem;
 }
@@ -369,8 +430,14 @@ body {
 }
 
 .gift__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   gap: 1.1rem;
 }
@@ -394,7 +461,12 @@ body {
 }
 
 .order__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -411,30 +483,54 @@ body {
   line-height: 1.8;
   letter-spacing: 0.2rem;
 }
+
 .order__input::-moz-placeholder {
   color: #696969;
 }
+
+.order__input::-webkit-input-placeholder {
+  color: #696969;
+}
+
+.order__input:-ms-input-placeholder {
+  color: #696969;
+}
+
+.order__input::-ms-input-placeholder {
+  color: #696969;
+}
+
 .order__input::placeholder {
   color: #696969;
 }
 
-.order__input + .order__input {
+.order__input+.order__input {
   margin-top: 2.1rem;
 }
 
 .order__be {
   margin: 2.1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1.1rem;
 }
 
 .order__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 0.7rem;
   padding-left: 4rem;
 }
+
 .order__label span {
   color: #696969;
   font-family: "Palatino";
@@ -449,6 +545,7 @@ body {
   width: 0;
   height: 0;
 }
+
 .order__radio::before {
   content: "";
   position: absolute;
@@ -459,8 +556,11 @@ body {
   background-color: #FFFFFF;
   border-radius: 50%;
   border: 0.2rem solid rgba(142, 104, 8, 0.4);
+  -webkit-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
   transition-duration: 300ms;
 }
+
 .order__radio::after {
   content: "";
   position: absolute;
@@ -470,6 +570,8 @@ body {
   height: 2rem;
   background-color: rgba(142, 104, 8, 0.4);
   border-radius: 50%;
+  -webkit-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
   transition-duration: 300ms;
   opacity: 0;
 }
@@ -483,8 +585,14 @@ body {
   height: 7.1rem;
   background-color: rgba(142, 104, 8, 0.4);
   border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-bottom: 5.3rem;
   font-family: "Palatino";
@@ -568,4 +676,4 @@ body {
   color: #FFFFFF;
   z-index: -1;
   text-shadow: 0.1rem 0.1rem 3rem rgba(255, 255, 255, 0.58);
-}/*# sourceMappingURL=index.css.map */
+}
