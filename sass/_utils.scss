@@ -1,0 +1,66 @@
+html {
+    font-size: 10px;
+    width: 48rem;
+    margin: 0 auto;
+}
+
+body {
+    font-family: $font-main;
+    color: $color-main;
+    line-height: 1.2;
+}
+
+.main__wrapper {
+    max-width: 48rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.container {
+    padding: 0 2rem;
+}
+
+.decor {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+}
+
+.decor__left {
+    width: 18rem;
+    height: .1rem;
+    background-color: rgba(142, 104, 8, 0.40);
+}
+
+.decor__right {
+    width: 18rem;
+    height: .1rem;
+    background-color: rgba(142, 104, 8, 0.40);
+}
+
+.heart {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-size: 5rem;
+    text-align: center;
+    font-family: 'Palatino';
+    font-weight: 400;
+}
+
+.section {
+    position: relative;
+    z-index: 3;
+}
+
+.inner {
+    padding: 4rem 3rem;
+    background-color: #FAF8F0;
+}

@@ -1,0 +1,47 @@
+.dress__title {
+    margin-bottom: 2rem;
+}
+
+.dress__text {
+    color: #21221E;
+    font-size: 3rem;
+    font-family: 'Palatino';
+    line-height: 1.4;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 1.7rem;
+    margin-bottom: 5.2rem;
+}
+
+.dress__list {
+    display: flex;
+    align-items: stretch;
+    gap: 1.7rem;
+}
+
+.dress__item {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: .2rem solid rgba(142, 104, 8, 0.40);
+
+    &:nth-child(1) {
+        background-color: #3E1416;
+    }
+
+    &:nth-child(2) {
+        background-color: #5F3A27;
+    }
+
+    &:nth-child(3) {
+        background-color: #A65528;
+    }
+
+    &:nth-child(4) {
+        background-color: #B08D77;
+    }
+
+    &:nth-child(5) {
+        background-color: #F7F4E9;
+    }
+}
