@@ -173,21 +173,20 @@ body {
   background-color: #FAF8F0;
 }
 
-/* .hero {
+.hero {
   position: relative;
   height: 100vh;
   background-image: url(../img/hero-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  background-attachment: fixed;
-} */
+  /* background-attachment: fixed; */
+}
 
-.hero {
+/* .hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  /* Отключаем скролл */
 }
 
 .hero::before {
@@ -205,10 +204,10 @@ body {
   background-size: cover;
   background-position: top center;
   z-index: -1;
-}
+} */
 
 .hero__title {
-  position: fixed;
+  /* position: fixed; */
   font-family: "Great Vibes", cursive;
   padding-top: 12rem;
   font-size: 12rem;
