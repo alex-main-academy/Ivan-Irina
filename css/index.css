@@ -273,6 +273,7 @@ body.is-loader {
 .photo {
   position: relative;
   z-index: 3;
+  background-color: #FAF8F0;
 }
 
 .photo img {
