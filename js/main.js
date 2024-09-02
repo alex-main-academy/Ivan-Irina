@@ -116,7 +116,10 @@ const isSafari = () => {
 };
 
 const isTelegram = () => {
-    return /Telegram/.test(navigator.userAgent);
+    return (
+        /Telegram/.test(navigator.userAgent) ||
+        /TELEGRAM/.test(navigator.userAgent)
+    );
 };
 
 // Выполняем код только в Chrome и Safari
