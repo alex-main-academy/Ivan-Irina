@@ -115,8 +115,12 @@ const isSafari = () => {
     );
 };
 
+const isTelegram = () => {
+    return /Telegram/.test(navigator.userAgent);
+};
+
 // Выполняем код только в Chrome и Safari
-if (isChrome() || isSafari()) {
+if (!isTelegram() && (isChrome() || isSafari())) {
     const titles = document.querySelectorAll(".title");
 
     // Настройки для IntersectionObserver
