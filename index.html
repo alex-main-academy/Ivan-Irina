@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -55,7 +56,7 @@
                         <div class="decor__right"></div>
                     </div>
                     <p class="friend__text text">
-                        Дорогий друг! Если ты читаешь это - значит ты являешься одним из близких нам людей, с которыми
+                        Если ты читаешь это - значит ты являешься одним из близких нам людей, с которыми
                         мы хотим разделить радость особенного для нас события. Поэтому мы приглашаем тебя стать частью
                         начала нашей семейной истории!
                     </p>
@@ -158,28 +159,32 @@
                         <img src="img/heart-mini.svg" alt="" width="50" height="50">
                         <div class="decor__right"></div>
                     </div>
-                    <ul class="programm__list">
-                        <li class="programm__item">
-                            <h3 class="programm__time">11:00</h3>
-                            <p class="programm__event">Сочетание</p>
-                        </li>
-                        <li class="programm__item">
-                            <h3 class="programm__time">13:00</h3>
-                            <p class="programm__event">1-я часть пира</p>
-                        </li>
-                        <li class="programm__item">
-                            <h3 class="programm__time">15:30</h3>
-                            <p class="programm__event">Перерыв</p>
-                        </li>
-                        <li class="programm__item">
-                            <h3 class="programm__time">16:30</h3>
-                            <p class="programm__event">2-я часть</p>
-                        </li>
-                        <li class="programm__item">
-                            <h3 class="programm__time">19:00</h3>
-                            <p class="programm__event">Окончание пира</p>
-                        </li>
-                    </ul>
+                    <div class="swiper programm__slider">
+                        <div class="swiper-wrapper programm__wrapper">
+                            <div class="swiper-slide programm__slide">
+                                <h3 class="programm__time">11:00</h3>
+                                <p class="programm__event">Сочетание</p>
+                            </div>
+                            <div class="swiper-slide programm__slide">
+                                <h3 class="programm__time">13:00</h3>
+                                <p class="programm__event">1-я часть пира</p>
+                            </div>
+                            <div class="swiper-slide programm__slide">
+                                <h3 class="programm__time">15:30</h3>
+                                <p class="programm__event">Перерыв</p>
+                            </div>
+                            <div class="swiper-slide programm__slide">
+                                <h3 class="programm__time">16:30</h3>
+                                <p class="programm__event">2-я часть</p>
+                            </div>
+                            <div class="swiper-slide programm__slide">
+                                <h3 class="programm__time">19:00</h3>
+                                <p class="programm__event">Окончание пира</p>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
                     <div class="heart">
                         <img src="img/heart-big.svg" alt="" width="70" height="73">
                     </div>
@@ -270,7 +275,7 @@
                 </div>
             </section>
 
-            <div class="loader js-loader active">
+            <div class="loader js-loader">
                 <div id="lottie-container" class="loader__container"></div>
             </div>
 
@@ -284,6 +289,8 @@
         </main>
     </div>
 
+    <script defer src="js/jquery.min.js"></script>
+    <script defer src="js/swiper-bundle.min.js"></script>
     <script defer src="js/main.js"></script>
 
 </body>

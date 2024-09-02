@@ -418,7 +418,7 @@ body.is-loader {
   padding: 4rem 0;
 }
 
-.programm__list {
+/* .programm__list {
   padding: 1.5rem 3rem 4rem 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -440,6 +440,36 @@ body.is-loader {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  align-items: center;
+} */
+
+.swiper-button-prev {
+  left: 3rem;
+}
+
+.swiper-button-next {
+  right: 3rem;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 2rem;
+  color: #8E6808;
+}
+
+.swiper-button-disabled {
+  display: none !important;
+}
+
+.programm__slider {
+  padding: 2rem 0;
+  margin-bottom: 4rem;
+}
+
+.programm__slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .programm__time {

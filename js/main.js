@@ -34,7 +34,7 @@ const success = document.querySelector(".js-success");
 
 setInterval(() => {
     loader.classList.remove("active");
-}, 1500);
+}, 1100);
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -223,3 +223,10 @@ if (!isTelegram() && (isChrome() || isSafari())) {
         observer2.observe(text);
     });
 }
+
+var swiper = new Swiper(".swiper", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
