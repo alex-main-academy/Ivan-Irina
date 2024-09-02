@@ -9,7 +9,7 @@
     <meta name="description"
         content="Дорогий друг! Если ты читаешь это - значит ты являешься одним из близких нам людей, с которыми мы хотим разделить радость особенного для нас события.">
     <meta property="og:description"
-        content='Дорогий друг! Если ты читаешь это- значит ты являешься одним из близких нам людей, с которыми мы хотим разделить радость особенного для нас события.'>
+        content='Дорогий друг! Если ты читаешь это - значит ты являешься одним из близких нам людей, с которыми мы хотим разделить радость особенного для нас события.'>
     <meta property="og:image" content="https://www.front-web-dev.site/ivan&irina/img/fb_img.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="628">
@@ -18,6 +18,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
@@ -31,13 +33,13 @@
         <main>
             <section class="hero">
                 <div class="hero__block js-hero-block active">
-                    <h1 class="hero__title">
+                    <h1 class="hero__title text">
                         Ivan <b>&</b> <br> <span>Irina</span>
                     </h1>
                     <img src="img/hero-img.jpg" alt="">
                 </div>
                 <div class="hero__block js-hero-block">
-                    <h1 class="hero__date">
+                    <h1 class="hero__date text">
                         28.09.2024
                     </h1>
                     <img src="img/img6.jpg" alt="">
@@ -52,12 +54,10 @@
                         <img src="img/heart-mini.svg" alt="" width="50" height="50">
                         <div class="decor__right"></div>
                     </div>
-                    <p class="friend__text">
-                        Если ты читаешь это- значит ты являешься одним из близких нам людей, с которыми мы хотим
-                        разделить
-                        радость особенного для нас события. Поэтому мы приглашаем тебя стать частью начала нашей
-                        семейной
-                        истории!
+                    <p class="friend__text text">
+                        Дорогий друг! Если ты читаешь это - значит ты являешься одним из близких нам людей, с которыми
+                        мы хотим разделить радость особенного для нас события. Поэтому мы приглашаем тебя стать частью
+                        начала нашей семейной истории!
                     </p>
                     <div class="heart">
                         <img src="img/heart-big.svg" alt="" width="70" height="73">
@@ -79,10 +79,10 @@
                         <img src="img/heart-mini.svg" alt="" width="50" height="50">
                         <div class="decor__right"></div>
                     </div>
-                    <p class="date__item">
+                    <p class="date__item text">
                         28.09.2024
                     </p>
-                    <p class="date__item">
+                    <p class="date__item text">
                         11:00
                     </p>
                     <div class="decor">
@@ -90,7 +90,7 @@
                         <img src="img/heart-mini.svg" alt="" width="50" height="50">
                         <div class="decor__right"></div>
                     </div>
-                    <p class="date__timer">
+                    <p class="date__timer text">
                         29:15:54:08
                     </p>
                 </div>
@@ -99,18 +99,20 @@
             <section class="place section">
                 <div class="place__inner inner">
                     <h2 class="place__title title">
-                        Место проведения
+                        Место <br> проведения
                     </h2>
                     <div class="decor">
                         <div class="decor__left"></div>
                         <img src="img/heart-mini.svg" alt="" width="50" height="50">
                         <div class="decor__right"></div>
                     </div>
-                    <p class="place__item">Bördeblick 1 a</p>
-                    <p class="place__item">
+                    <p class="place__item text">Bördeblick 1 a</p>
+                    <p class="place__item text">
                         34434 Borgentreich-Rösebeck
                     </p>
-                    <a href="#" class="place__link">
+                    <a target="_blank"
+                        href="https://www.google.com/maps/place/B%C3%B6rdeblick+1a,+34434+Borgentreich,+%D0%93%D0%B5%D1%80%D0%BC%D0%B0%D0%BD%D0%B8%D1%8F/@51.5205901,9.2468219,18.75z/data=!4m6!3m5!1s0x47bb1adade611dc9:0x31e7968dd4287a6!8m2!3d51.5206187!4d9.2467606!16s%2Fg%2F11h3dblx97?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D"
+                        class="place__link">
                         <span>открыть карту</span>
                     </a>
                     <div class="heart">
@@ -133,7 +135,7 @@
                         <img src="img/heart-mini.svg" alt="" width="50" height="50">
                         <div class="decor__right"></div>
                     </div>
-                    <p class="dress__text">
+                    <p class="dress__text text">
                         Мы были бы рады, если бы ты поддержал наш свадебный дресс-код
                     </p>
                     <ul class="dress__list">
@@ -149,7 +151,7 @@
             <section class="programm section">
                 <div class="programm__inner">
                     <h2 class="programm__title title">
-                        Программа торжества
+                        Программа <br> торжества
                     </h2>
                     <div class="decor">
                         <div class="decor__left"></div>
@@ -190,7 +192,7 @@
 
             <section class="gift section">
                 <div class="gift__inner inner">
-                    <h2 class="gift__title">
+                    <h2 class="gift__title text">
                         Наше пожелание
                         по поводу подарков:
                     </h2>
@@ -205,32 +207,32 @@
             <section class="order section">
                 <div class="order__inner inner">
                     <h2 class="order__title title">
-                        Форма для заполнения
+                        Форма <br> для заполнения
                     </h2>
                     <div class="decor">
                         <div class="decor__left"></div>
                         <img src="img/heart-mini.svg" alt="" width="50" height="50">
                         <div class="decor__right"></div>
                     </div>
-                    <p class="order__subtitle">
-                        Подтвердите, пожалуйста
-                        свое участие в торжестве
+                    <p class="order__subtitle text">
+                        Подтвердите, пожалуйста, свое участие в торжестве до 15.09.2024
                     </p>
-                    <form class="order__form">
-                        <input type="text" class="order__input" name="name" minlength="2" required
+                    <form class="order__form js-form">
+                        <input type="text" class="order__input" name="имя" minlength="2" required
                             placeholder="Имя и Фамилия">
-                        <input type="number" class="order__input" name="count" min="0" max="30" required
+                        <input type="number" class="order__input" name="количество" min="0" max="30" required
                             placeholder="Количество людей">
                         <div class="order__be">
                             <label class="order__label">
-                                <input type="radio" class="order__radio" name="be" id="true" value="true">
+                                <input type="radio" class="order__radio" name="присутствие" id="true" value="да">
                                 <span>Я смогу прийти</span>
                             </label>
                             <label class="order__label">
-                                <input type="radio" class="order__radio" name="be" id="false" value="false">
+                                <input type="radio" class="order__radio" name="присутствие" id="false" value="нет">
                                 <span>Я не смогу прийти</span>
                             </label>
                         </div>
+                        <input type="hidden" name="дата" class="js-form-date">
                         <button class="order__submit" type="submit">отправить</button>
                     </form>
                     <div class="heart">
@@ -246,9 +248,9 @@
             <section class="info section">
                 <div class="info__inner inner">
                     <h2 class="info__title title">
-                        Дополнительная информация
+                        Дополнительная <br> информация
                     </h2>
-                    <p class="info__text">
+                    <p class="info__text text">
                         Если возникнут вопросы по поводу программы, участия- обращайся по номеру <br>
                         <a href="tel:+491517236677" class="info__phone">+491517236677</a>
                         <br>
@@ -259,7 +261,7 @@
 
             <section class="happy section">
                 <div class="happy__inner inner">
-                    <h2 class="happy__title">
+                    <h2 class="happy__title text">
                         Мы будем очень рады твоему присутствию
                     </h2>
                     <div class="heart">
@@ -268,12 +270,17 @@
                 </div>
             </section>
 
-            <!-- <section class="photo section last">
-                <h2 class="last__date">
-                    28.09.2024
-                </h2>
-                <img src="img/img6.jpg" alt="">
-            </section> -->
+            <div class="loader js-loader active">
+                <div id="lottie-container" class="loader__container"></div>
+            </div>
+
+            <div class="success js-success">
+                <h2 class="success__title">Благодарим</h2>
+                <p class="success__text">С нетерпением ждем вас!</p>
+                <div class="heart">
+                    <img src="img/heart-big.svg" alt="" width="70" height="73">
+                </div>
+            </div>
         </main>
     </div>
 

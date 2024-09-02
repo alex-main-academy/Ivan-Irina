@@ -109,6 +109,10 @@ body {
   line-height: 1.2;
 }
 
+body.is-loader {
+  overflow: hidden;
+}
+
 .main__wrapper {
   max-width: 48rem;
   margin: 0 auto;
@@ -185,7 +189,9 @@ body {
 .hero__date {
   position: fixed;
   bottom: 4rem;
-  left: 4rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
   font-family: "Great Vibes", cursive;
   font-size: 10rem;
   font-weight: 400;
@@ -202,11 +208,15 @@ body {
   position: fixed;
   top: 0;
   left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   max-width: 48rem;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
 }
 
@@ -417,7 +427,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   overflow: auto;
-  gap: 4rem;
+  gap: 10rem;
   margin-bottom: 5rem;
   border-bottom: 0.1rem solid rgba(142, 104, 8, 0.4);
 }
@@ -426,10 +436,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .programm__time {
@@ -437,15 +447,17 @@ body {
   font-family: "Palatino";
   color: rgba(142, 104, 8, 0.4);
   font-weight: 300;
+  letter-spacing: .3rem;
 }
 
 .programm__event {
   font-family: "Palatino";
   color: #212121;
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 300;
   white-space: nowrap;
   max-width: none;
+  letter-spacing: .1rem;
 }
 
 .gift__title {
@@ -468,10 +480,6 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   gap: 1.1rem;
-}
-
-.order__inner {
-  padding-top: 0;
 }
 
 .order__title {
@@ -682,4 +690,151 @@ body {
   letter-spacing: 0.2rem;
   text-align: center;
   margin-bottom: 3rem;
+}
+
+/* loader */
+.loader {
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(1rem);
+  backdrop-filter: blur(1rem);
+  background-color: rgba(142, 104, 8, 0.4);
+  z-index: 101;
+  -webkit-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
+  transition-duration: 300ms;
+}
+
+.loader.active {
+  /* display: block; */
+  opacity: 1;
+  visibility: visible;
+}
+
+.loader__container {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  width: 25rem;
+  height: 25rem;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.success {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  -ms-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  background-color: #FAF8F0;
+  z-index: 10;
+  padding: 4rem;
+  border-radius: 2rem;
+
+  -webkit-box-shadow: 0 0 1rem .2rem rgba(0, 0, 0, 0.4);
+
+  box-shadow: 0 0 1rem .2rem rgba(0, 0, 0, 0.4);
+
+  -webkit-transition-duration: 300ms;
+
+  -o-transition-duration: 300ms;
+
+  transition-duration: 300ms;
+}
+
+.success.active {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.success__title {
+  font-size: 4.6rem;
+  font-family: 'Palatino';
+  text-align: center;
+  color: #212121;
+  margin-bottom: 1.5rem;
+}
+
+.success__text {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  line-height: 1.4;
+  color: #212121;
+}
+
+.title {
+  text-align: center;
+  /* Центрирование текста */
+  display: inline-block;
+  /* Центрирование относительно родителя */
+  position: relative;
+  /* Позиционирование для анимации */
+  overflow: hidden;
+  /* Скрытие лишнего текста */
+  white-space: nowrap;
+  margin: 0 auto;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  /* Запрещаем перенос строк */
+}
+
+.title span {
+  display: block;
+  /* Блочный элемент для построчного отображения */
+  opacity: 0;
+  /* Изначально невидимый */
+  margin: 0 auto;
+  /* Центрирование каждой строки */
+  width: 0;
+  /* Начальная ширина для анимации печати */
+  white-space: nowrap;
+  /* Сохраняем текст в одну строку */
+  overflow: hidden;
+  /* Скрываем содержимое, которое не помещается */
+  border-right: .2rem solid transparent;
+}
+
+.title span.blinking {
+  border-right: .2rem solid #212121;
+}
+
+.text {
+  opacity: 0;
+  /* Изначально скрыто */
+  -webkit-transition: opacity 1.3s ease-in-out;
+  -o-transition: opacity 1.3s ease-in-out;
+  transition: opacity 1.3s ease-in-out;
+  /* Плавное изменение прозрачности */
+}
+
+/* Эффект появления при активации класса */
+.text.visible {
+  opacity: 1;
+  /* Полная видимость */
 }
